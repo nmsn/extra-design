@@ -1,0 +1,49 @@
+@import '../../style/index.less';
+
+@hl-prefix-cls: ~'@{xui-prefix}__head-line';
+
+.@{hl-prefix-cls} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  &--title {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+
+    &--back {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 21px;
+      color: #999;
+      font-weight: normal;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        color: @primary-color;
+        border-color: @primary-color;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        width: 1px;
+        height: 20px;
+        background-color: #d8d8d8;
+        transform: translateY(-50%);
+        content: '';
+      }
+    }
+  }
+}

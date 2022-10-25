@@ -1,0 +1,45 @@
+@import './color/colors';
+
+// 主题色
+@primary-color: @blue-6;
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+@primary-1: color(~`colorPalette('@{primary-color}', 1) `); // replace tint(@primary-color, 90%)
+@primary-2: color(~`colorPalette('@{primary-color}', 2) `); // replace tint(@primary-color, 80%)
+@primary-3: color(~`colorPalette('@{primary-color}', 3) `); // unused
+@primary-4: color(~`colorPalette('@{primary-color}', 4) `); // unused
+@primary-5: color(
+  ~`colorPalette('@{primary-color}', 5) `
+); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+@primary-6: @primary-color; // color used to control the text color of active buttons, don't use, use @primary-color
+@primary-7: color(~`colorPalette('@{primary-color}', 7) `); // replace shade(@primary-color, 5%)
+@primary-8: color(~`colorPalette('@{primary-color}', 8) `); // unused
+@primary-9: color(~`colorPalette('@{primary-color}', 9) `); // unused
+@primary-10: color(~`colorPalette('@{primary-color}', 10) `); // unused
+
+// 遮罩层颜色
+@modal-mask-bg: rgba(0, 0, 0, 0.45);
+
+// 文字颜色
+@text-color: #333;
+
+// input高度
+@input-height-base: 30px;
+
+// Outline
+@outline-color: @primary-color;
+
+@background-color-base: #eee;
+
+// Disabled states
+@disabled-color: fade(#000, 25%);
+@disabled-bg: @background-color-base;
+@disabled-color-dark: fade(#fff, 35%);
+
+@menu-item-active-bg: @primary-1;
+@btn-primary-bg: @primary-color;
+@checkbox-mandatory-color: @primary-color;
+@checkbox-disabled-color: @primary-color;
+@input-placeholder-color: @primary-color;
+@error-color: @red-5;
