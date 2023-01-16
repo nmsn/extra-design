@@ -12,7 +12,7 @@ const HeadLine: React.FC<HeadLineProps> = ({
   onBack,
   extra,
 }) => {
-  const className = "-ant__head-line";
+  const className = "xui-ant__head-line";
 
   const goBack = useCallback(() => {
     if (onBack) {
