@@ -1,5 +1,5 @@
 {
-  "name": "Extra",
+  "name": "extra-design",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "nmsn <136696700@qq.com>",
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],

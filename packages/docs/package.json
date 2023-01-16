@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "docs",
+  "name": "@extra-design/docs",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
