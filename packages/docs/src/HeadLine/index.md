@@ -10,7 +10,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { HeadLine } from 'components';
+import { HeadLine } from '@extra-design/components';
 
 
 export default () => (
