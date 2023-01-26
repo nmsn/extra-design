@@ -14,6 +14,7 @@ export default defineConfig({
         libraryName: '@extra-design/components',
         libraryDirectory: 'es',
         style: true,
+        camel2DashComponentName: false,
       },
     ],
   ],

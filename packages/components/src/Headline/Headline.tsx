@@ -2,9 +2,9 @@ import React, { useCallback } from "react";
 
 import classNames from "classnames";
 
-import { HeadLineProps } from "./head-line.d";
+import type { HeadlineProps } from "./Headline.d";
 
-const HeadLine: React.FC<HeadLineProps> = ({
+const Headline: React.FC<HeadlineProps> = ({
   className: wrapperClassName = "",
   style = {},
   title = "",
@@ -12,7 +12,7 @@ const HeadLine: React.FC<HeadLineProps> = ({
   onBack,
   extra,
 }) => {
-  const className = "xui-ant__head-line";
+  const className = "extra-design__head-line";
 
   const goBack = useCallback(() => {
     if (onBack) {
@@ -43,4 +43,4 @@ const HeadLine: React.FC<HeadLineProps> = ({
   );
 };
 
-export default HeadLine;
+export default Headline;

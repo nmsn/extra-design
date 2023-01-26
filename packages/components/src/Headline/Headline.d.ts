@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { StandardProps } from "../@types/common";
 
-export interface HeadLineProps extends StandardProps {
+export interface HeadlineProps extends StandardProps {
   /**
    * @description       Extra area on the right
    * @description.zh-CN 右侧额外区域
@@ -29,8 +29,8 @@ export interface HeadLineProps extends StandardProps {
   onBack?: () => void;
 }
 
-export type HeadLineContextProps = HeadLineProps;
+export type HeadLineContextProps = HeadlineProps;
 
-declare const HeadLine: React.ComponentType<HeadLineProps>;
+declare const HeadLine: React.ComponentType<HeadlineProps>;
 
 export default HeadLine;

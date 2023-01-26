@@ -4,23 +4,19 @@ nav:
   path: /components
 --- -->
 
-## HeadLine
+## Headline
 
 Demo:
 
 ```tsx
 import React from 'react';
-import { HeadLine } from '@extra-design/components';
+import { Headline } from '@extra-design/components';
 
 
 export default () => (
   <div>
-    <HeadLine title="head" />
+    <Headline title="head" />
     <div>body</div>
   </div>
 );
 ```
-
-<!-- <API src="../../../api/HeadLine.tsx"></API> -->
-
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
