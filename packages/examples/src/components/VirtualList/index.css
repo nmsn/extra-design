@@ -1,0 +1,11 @@
+.scroll_box {
+  overflow: scroll;
+  position: relative;
+}
+
+.scroll_hold {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}

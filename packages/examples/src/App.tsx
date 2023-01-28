@@ -1,12 +1,15 @@
 import "./App.css";
 import { Button } from "antd";
-import { HeadLine } from "@extra-design/components";
+import { Headline } from "@extra-design/components";
+
+import VirtualList from "./components/VirtualList";
 
 function App() {
   return (
     <div className="App">
       <Button type="primary">测试</Button>
-      <HeadLine title="head">123</HeadLine>
+      <Headline title="head">123</Headline>
+      <VirtualList />
     </div>
   );
 }
