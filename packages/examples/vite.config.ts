@@ -14,7 +14,9 @@ export default defineConfig({
         },
         {
           libName: "@extra-design/components",
-          style: (name) => `@extra-design/components/lib/${name}/style/index.less`,
+          style: (name) =>
+            `@extra-design/components/lib/${name}/style/index.less`,
+          camel2DashComponentName: false,
         },
       ],
     }),
@@ -24,7 +26,7 @@ export default defineConfig({
       less: {
         // 支持内联 JavaScript
         javascriptEnabled: true,
-      }
-    }
+      },
+    },
   },
 });

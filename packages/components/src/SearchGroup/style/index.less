@@ -1,0 +1,179 @@
+@import url('../../style/index.less');
+
+@searchComponent-prefix-cls: ~'@{ui-prefix}__search-component';
+@searchComponent-prefix-cls--container: ~'@{searchComponent-prefix-cls}--container';
+@searchComponent-prefix-cls--popup: ~'@{searchComponent-prefix-cls}--popup';
+@searchComponent-prefix-cls--show: ~'@{searchComponent-prefix-cls}--show';
+@searchComponent-prefix-cls--col: ~'@{searchComponent-prefix-cls}--col';
+@searchComponent-prefix-cls--switch: ~'@{searchComponent-prefix-cls}--switch';
+@searchComponent-prefix-cls--btn: ~'@{searchComponent-prefix-cls}--btn';
+@searchComponent-prefix-cls--position: ~'@{searchComponent-prefix-cls}--position';
+
+.@{searchComponent-prefix-cls--container} {
+  margin-bottom: 8px;
+
+  .@{searchComponent-prefix-cls--position} {
+    position: relative;
+    width: 100%;
+
+    .ant-input-affix-wrapper {
+      transition: none;
+    }
+
+    .@{searchComponent-prefix-cls} {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0 !important;
+      background-color: #fff;
+
+      .@{searchComponent-prefix-cls--switch} {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        color: @primary-color;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer;
+
+        &-icon {
+          margin-left: 8px;
+        }
+      }
+
+      &--iconfont {
+        float: left;
+        width: @input-height-base;
+        height: @input-height-base;
+        color: #999;
+        line-height: @input-height-base;
+        text-align: center;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          color: @primary-color;
+          border-color: @primary-color;
+        }
+      }
+
+      &--iconfont--search {
+        color: @primary-color !important;
+        border-color: @primary-color !important;
+      }
+
+      &--col {
+        display: flex;
+        align-items: center; // TODO baseline 在 Select 选中时失效
+
+        &--title {
+          padding-right: 6px;
+          white-space: nowrap;
+          text-align: right;
+
+          &--questionTooltip {
+            margin-left: 5px;
+          }
+        }
+
+        &--content {
+          display: flex;
+          align-items: center;
+          width: 160px;
+          margin-right: 20px;
+
+          &--segmentation {
+            flex: 0 0 6px;
+            height: 1px;
+            margin: 0 5px;
+            background-color: #333;
+          }
+
+          .ant-select-selector {
+            width: 100%;
+          }
+        }
+      }
+
+      &--btn {
+        display: flex;
+        align-items: center;
+
+        button {
+          &:first-child {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    .@{searchComponent-prefix-cls--popup} {
+      position: absolute;
+      top: 0 !important;
+      left: 0;
+      z-index: 10;
+      display: none;
+      padding: 12px 20px 20px;
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 10%);
+
+      .@{searchComponent-prefix-cls--btn} {
+        justify-content: center;
+        width: 100%;
+        margin-top: 8px;
+
+        button {
+          &:first-child {
+            margin-right: 8px;
+          }
+        }
+
+        .@{searchComponent-prefix-cls--switch} {
+          &-icon {
+            transform: rotateX(180deg);
+          }
+        }
+      }
+
+      .@{searchComponent-prefix-cls--popup}--content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .@{searchComponent-prefix-cls--col} {
+        flex: 0 1 33.3%;
+        margin: 8px 0;
+
+        &--title {
+          flex: 0 0 161px;
+          max-width: 161px;
+        }
+
+        &--content {
+          flex: 1;
+          margin-right: 0;
+
+          .ant-select-selector {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .@{searchComponent-prefix-cls--show} {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .@{searchComponent-prefix-cls--container} {
+    .@{searchComponent-prefix-cls--popup} {
+      .@{searchComponent-prefix-cls--col} {
+        flex: 0 1 25% !important;
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ import TreeSelect from "antd/es/tree-select";
 import classNames from "classnames";
 import dayjs from "dayjs";
 
-const className = "xui-ant__search-component";
+const className = "extra-design__search-component";
 
 const dropdownClassName = `${className}--dropdown`;
 
@@ -21,6 +21,7 @@ interface NodeContainerProps {
   itemKey: string;
   label: string | JSX.Element;
   width?: number;
+  children: React.ReactNode;
 }
 
 export const NodeContainer: FC<NodeContainerProps> = ({
@@ -31,10 +32,7 @@ export const NodeContainer: FC<NodeContainerProps> = ({
 }) => {
   return (
     <div key={itemKey} className={`${className}--col`}>
-      <div className={`${className}--col--title`}>
-        {label}
-        :
-      </div>
+      <div className={`${className}--col--title`}>{label}:</div>
       <div
         className={classNames({
           [`${className}--col--content`]: true,
