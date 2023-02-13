@@ -13,6 +13,7 @@ specifiers:
   '@babel/runtime': 7.17.8
   '@types/react': ^18.0.22
   '@types/react-dom': ^18.0.7
+  '@types/react-resizable': ^3.0.3
   antd: ^4.23.6
   babel-loader: 8.2.2
   babel-plugin-add-module-exports: 1.0.4
@@ -29,14 +30,12 @@ specifiers:
   gulp-typescript: 6.0.0-alpha.1
   react: ^18.2.0
   react-dom: ^18.2.0
-  react-resizable: ^3.0.4
 
 dependencies:
   antd: 4.24.7_biqbaboplfbrettd7655fr4n2y
   classnames: 2.3.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-resizable: 3.0.4_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@babel/core': 7.17.8
@@ -51,6 +50,7 @@ devDependencies:
   '@babel/runtime': 7.17.8
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.10
+  '@types/react-resizable': 3.0.3
   babel-loader: 8.2.2_4p3vkjcbzrpv5ifqxvywixco4i
   babel-plugin-add-module-exports: 1.0.4
   babel-plugin-lodash: 3.3.4
@@ -1561,6 +1561,12 @@ packages:
       '@types/react': 18.0.28
     dev: true
 
+  /@types/react-resizable/3.0.3:
+    resolution: {integrity: sha512-W/QsUOZoXBAIBQNhNm95A5ohoaiUA874lWQytO2UP9dOjp5JHO9+a0cwYNabea7sA12ZDJnGVUFZxcNaNksAWA==}
+    dependencies:
+      '@types/react': 18.0.28
+    dev: true
+
   /@types/react/18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
     dependencies:
@@ -2270,11 +2276,6 @@ packages:
       process-nextick-args: 2.0.1
       readable-stream: 2.3.7
     dev: true
-
-  /clsx/1.2.1:
-    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
-    engines: {node: '>=6'}
-    dev: false
 
   /code-point-at/1.1.0:
     resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
@@ -4048,6 +4049,7 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /object-copy/0.1.0:
     resolution: {integrity: sha512-79LYn6VAb63zgtmAteVOWo9Vdj71ZVBy3Pbse+VqxDpEP83XuujMrGqHIwAXJ5I/aM0zU7dIyIAhifVTPrNItQ==}
@@ -4339,14 +4341,6 @@ packages:
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
-
-  /prop-types/15.8.1:
-    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react-is: 16.13.1
-    dev: false
 
   /prr/1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
@@ -4920,32 +4914,8 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-draggable/4.4.5_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-OMHzJdyJbYTZo4uQE393fHcqqPYsEtkjfMgvCHr6rejT+Ezn4OZbNyGH50vv+SunC1RMvwOTSWkEODQLzw1M9g==}
-    peerDependencies:
-      react: '>= 16.3.0'
-      react-dom: '>= 16.3.0'
-    dependencies:
-      clsx: 1.2.1
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: false
-
-  /react-resizable/3.0.4_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-StnwmiESiamNzdRHbSSvA65b0ZQJ7eVQpPusrSmcpyGKzC0gojhtO62xxH6YOBmepk9dQTBi9yxidL3W4s3EBA==}
-    peerDependencies:
-      react: '>= 16.3'
-    dependencies:
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-draggable: 4.4.5_biqbaboplfbrettd7655fr4n2y
-    transitivePeerDependencies:
-      - react-dom
     dev: false
 
   /react/18.2.0:

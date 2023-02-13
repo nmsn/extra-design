@@ -69,7 +69,10 @@ function App() {
         <Button>5</Button>
       </FirstBtnPrimary>
       <Divider />
-      <Button onClick={globalMessage.success("123")}>globalMessage</Button>
+      <Button onClick={() => globalMessage.success("123")}>
+        globalMessage
+      </Button>
+      <Divider />
     </div>
   );
 }
