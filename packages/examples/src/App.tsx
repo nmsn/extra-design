@@ -5,6 +5,7 @@ import {
   SearchGroup,
   PromptModal,
   FirstBtnPrimary,
+  globalMessage,
 } from "@extra-design/components";
 
 import VirtualList from "./components/VirtualList";
@@ -67,6 +68,8 @@ function App() {
         <Button>4</Button>
         <Button>5</Button>
       </FirstBtnPrimary>
+      <Divider />
+      <Button onClick={globalMessage.success("123")}>globalMessage</Button>
     </div>
   );
 }
