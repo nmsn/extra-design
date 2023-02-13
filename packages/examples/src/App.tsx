@@ -1,6 +1,6 @@
 import "./App.css";
 import { Button } from "antd";
-import { Headline, SearchGroup } from "@extra-design/components";
+import { Headline, SearchGroup, PromptModal } from "@extra-design/components";
 
 import VirtualList from "./components/VirtualList";
 
@@ -40,6 +40,17 @@ function App() {
         ]}
         onSearch={(...data: any[]) => console.log(data)}
       />
+
+      <button
+        onClick={() =>
+          PromptModal.openPromptModal({
+            type: "prompt",
+            title: "123",
+          })
+        }
+      >
+        确认
+      </button>
     </div>
   );
 }
