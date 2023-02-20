@@ -1,0 +1,25 @@
+@import url('~@/common.less');
+
+.tip {
+  display: flex;
+  min-height: 40px;
+  // 根据不同项目内边距决定
+  margin: -16px -16px 16px;
+  padding: 8px 16px;
+
+  :global {
+    .anticon {
+      margin-right: 9px;
+    }
+  }
+}
+
+.warning {
+  color: @highlight-text;
+  background-color: @highlight-background;
+}
+
+.error {
+  color: @error-text;
+  background-color: @error-background;
+}
