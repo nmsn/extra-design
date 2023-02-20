@@ -1,0 +1,28 @@
+@import url('~@/common.less');
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &Label {
+    position: relative;
+    padding-left: 10px;
+    font-size: 16px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 2px;
+      height: 14px;
+      background: @primary-color;
+      transform: translateY(-50%);
+      content: '';
+    }
+  }
+
+  &Extra {
+    flex: none;
+  }
+}
