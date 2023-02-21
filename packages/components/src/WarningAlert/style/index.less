@@ -1,0 +1,30 @@
+@import '../../style/index.less';
+
+@component-prefix-cls: ~'@{ui-prefix}__warning-alert';
+
+.@{component-prefix-cls} {
+  &--tip {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    // 根据不同项目内边距决定
+    margin: -24px -24px 24px;
+    padding: 8px 24px;
+
+    .anticon {
+      display: block;
+      margin-right: 9px;
+      height: 14px;
+    }
+  }
+
+  &--warning {
+    color: @highlight-text;
+    background-color: @highlight-background;
+  }
+ 
+  &--error {
+    color: @error-text;
+    background-color: @error-background;
+  }
+}

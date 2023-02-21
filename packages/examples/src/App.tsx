@@ -1,16 +1,23 @@
 import "./App.css";
-import { Button, Divider } from "antd";
+import { useState } from "react";
+import { Button, Divider, Modal } from "antd";
 import {
   Headline,
   SearchGroup,
-  PromptModal,
   FirstBtnPrimary,
   globalMessage,
+  PromptModal,
+  WarningAlert,
 } from "@extra-design/components";
 
 import VirtualList from "./components/VirtualList";
 
 function App() {
+  const [visible, setVisible] = useState(false);
+
+  const onToggle = () => {
+    setVisible(!visible);
+  };
   return (
     <div className="App">
       <Button type="primary">测试</Button>
@@ -73,6 +80,18 @@ function App() {
         globalMessage
       </Button>
       <Divider />
+      <Modal
+        open={visible}
+        title="Basic Modal"
+        onOk={onToggle}
+        onCancel={onToggle}
+      >
+        <WarningAlert>123</WarningAlert>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
+      <Button onClick={onToggle}>WaringAlert</Button>
     </div>
   );
 }
