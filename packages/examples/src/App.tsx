@@ -65,7 +65,7 @@ function App() {
           })
         }
       >
-        确认
+        PromptModal
       </Button>
       <Divider />
       <FirstBtnPrimary>
