@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": "nmsn",
+  "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -25,7 +26,7 @@
   },
   "dependencies": {
     "antd": "^4.23.6",
-    "classnames": "^2.3.2",
+    "classnames": "^2.3.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -47,8 +48,10 @@
     "gulp-postcss": "9.0.0",
     "gulp-rename": "2.0.0",
     "gulp-replace": "1.1.3",
+    "less": "^4.1.3",
     "rollup": "^3.17.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.1"
   }
 }
