@@ -24,11 +24,13 @@ specifiers:
   del: 5.1.0
   gulp: ^4.0.2
   gulp-babel: 8.0.0
+  gulp-clean-css: ^4.3.0
   gulp-less: 5.0.0
   gulp-postcss: 9.0.0
   gulp-rename: 2.0.0
   gulp-replace: 1.1.3
   gulp-sourcemaps: 3.0.0
+  gulp-terser-js: ^5.2.2
   gulp-typescript: 6.0.0-alpha.1
   less: ^4.1.3
   react: ^18.2.0
@@ -37,6 +39,7 @@ specifiers:
   rollup-plugin-peer-deps-external: ^2.2.4
   rollup-plugin-postcss: ^4.0.2
   rollup-plugin-typescript2: ^0.34.1
+  typescript: ^5.0.3
 
 dependencies:
   antd: 4.24.7_biqbaboplfbrettd7655fr4n2y
@@ -66,17 +69,20 @@ devDependencies:
   del: 5.1.0
   gulp: 4.0.2
   gulp-babel: 8.0.0_@babel+core@7.17.8
+  gulp-clean-css: 4.3.0
   gulp-less: 5.0.0
   gulp-postcss: 9.0.0_postcss@8.4.21
   gulp-rename: 2.0.0
   gulp-replace: 1.1.3
   gulp-sourcemaps: 3.0.0
-  gulp-typescript: 6.0.0-alpha.1_typescript@4.9.5
+  gulp-terser-js: 5.2.2
+  gulp-typescript: 6.0.0-alpha.1_typescript@5.0.3
   less: 4.1.3
   rollup-plugin-clear: 2.0.7
   rollup-plugin-peer-deps-external: 2.2.4_rollup@3.20.2
   rollup-plugin-postcss: 4.0.2_postcss@8.4.21
-  rollup-plugin-typescript2: 0.34.1_e7tciabaay7z2i5ycjdzz3zl6i
+  rollup-plugin-typescript2: 0.34.1_veck7oukgpukn72f5inxoyux7q
+  typescript: 5.0.3
 
 packages:
 
@@ -2367,6 +2373,13 @@ packages:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
+  /clean-css/4.2.3:
+    resolution: {integrity: sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA==}
+    engines: {node: '>= 4.0'}
+    dependencies:
+      source-map: 0.6.1
+    dev: true
+
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -3426,6 +3439,15 @@ packages:
       vinyl-sourcemaps-apply: 0.2.1
     dev: true
 
+  /gulp-clean-css/4.3.0:
+    resolution: {integrity: sha512-mGyeT3qqFXTy61j0zOIciS4MkYziF2U594t2Vs9rUnpkEHqfu6aDITMp8xOvZcvdX61Uz3y1mVERRYmjzQF5fg==}
+    dependencies:
+      clean-css: 4.2.3
+      plugin-error: 1.0.1
+      through2: 3.0.1
+      vinyl-sourcemaps-apply: 0.2.1
+    dev: true
+
   /gulp-cli/2.3.0:
     resolution: {integrity: sha512-zzGBl5fHo0EKSXsHzjspp3y5CONegCm8ErO5Qh0UzFzk2y4tMvzLWhoDokADbarfZRL2pGpRp7yt6gfJX4ph7A==}
     engines: {node: '>= 0.10'}
@@ -3515,7 +3537,17 @@ packages:
       - supports-color
     dev: true
 
-  /gulp-typescript/6.0.0-alpha.1_typescript@4.9.5:
+  /gulp-terser-js/5.2.2:
+    resolution: {integrity: sha512-4ull0HzTWeWjRPiGmAFmdhRcEDOG+r7aXivNHOBQzElLzMaeVKQwmCPDi2juBzUUkjAkPkKb1jHVoJN/PKTvcA==}
+    dependencies:
+      plugin-error: 1.0.1
+      source-map: 0.7.4
+      terser: 4.8.1
+      through2: 3.0.2
+      vinyl-sourcemaps-apply: 0.2.1
+    dev: true
+
+  /gulp-typescript/6.0.0-alpha.1_typescript@5.0.3:
     resolution: {integrity: sha512-KoT0TTfjfT7w3JItHkgFH1T/zK4oXWC+a8xxKfniRfVcA0Fa1bKrIhztYelYmb+95RB80OLMBreknYkdwzdi2Q==}
     engines: {node: '>= 8'}
     peerDependencies:
@@ -3525,7 +3557,7 @@ packages:
       plugin-error: 1.0.1
       source-map: 0.7.4
       through2: 3.0.2
-      typescript: 4.9.5
+      typescript: 5.0.3
       vinyl: 2.2.1
       vinyl-fs: 3.0.3
     dev: true
@@ -6049,7 +6081,7 @@ packages:
       - ts-node
     dev: true
 
-  /rollup-plugin-typescript2/0.34.1_e7tciabaay7z2i5ycjdzz3zl6i:
+  /rollup-plugin-typescript2/0.34.1_veck7oukgpukn72f5inxoyux7q:
     resolution: {integrity: sha512-P4cHLtGikESmqi1CA+tdMDUv8WbQV48mzPYt77TSTOPJpERyZ9TXdDgjSDix8Fkqce6soYz3+fa4lrC93IEkcw==}
     peerDependencies:
       rollup: '>=1.26.3'
@@ -6061,7 +6093,7 @@ packages:
       rollup: 3.20.2
       semver: 7.3.8
       tslib: 2.5.0
-      typescript: 4.9.5
+      typescript: 5.0.3
     dev: true
 
   /rollup-pluginutils/2.8.2:
@@ -6481,6 +6513,17 @@ packages:
       webpack: 5.75.0
     dev: true
 
+  /terser/4.8.1:
+    resolution: {integrity: sha512-4GnLC0x667eJG0ewJTa6z/yXrbLGv80D9Ru6HIpCQmO+Q4PfEtBFi0ObSckqwL6VyQv/7ENJieXHo2ANmdQwgw==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+    dependencies:
+      acorn: 8.8.2
+      commander: 2.20.3
+      source-map: 0.6.1
+      source-map-support: 0.5.21
+    dev: true
+
   /terser/5.16.3:
     resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
     engines: {node: '>=10'}
@@ -6509,6 +6552,12 @@ packages:
     dependencies:
       readable-stream: 2.3.7
       xtend: 4.0.2
+    dev: true
+
+  /through2/3.0.1:
+    resolution: {integrity: sha512-M96dvTalPT3YbYLaKaCuwu+j06D/8Jfib0o/PxbVt6Amhv3dUAtW6rTV1jPgJSBG83I/e04Y6xkVdVhSRhi0ww==}
+    dependencies:
+      readable-stream: 3.6.0
     dev: true
 
   /through2/3.0.2:
@@ -6608,9 +6657,9 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.3:
+    resolution: {integrity: sha512-xv8mOEDnigb/tN9PSMTwSEqAnUvkoXMQlicOb0IUVDBSQCgBSaAAROUZYy2IcUy5qU6XajK5jjjO7TMWqBTKZA==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 

@@ -6,4 +6,3 @@ export { default as globalMessage } from "./globalMessage";
 export { default as WarningAlert } from "./WarningAlert";
 
 // export type { WarningAlertProps } from "./WarningAlert/WarningAlert.d";
-
