@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 
 import "antd/es/input/style/index";
 import "antd/es/select/style/index";
