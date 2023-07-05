@@ -4,7 +4,7 @@ export interface ModalParams {
    * @description.zh-CN 图标
    * @default
    */
-  icon?: 'warning' | 'error' | JSX.Element;
+  icon?: "warning" | "error" | JSX.Element;
   /**
    * @description       Title
    * @description.zh-CN 标题
@@ -37,7 +37,7 @@ export interface ConfirmModalParams extends ModalParams {
    * @description.zh-CN 类型 'confirm'
    * @default
    */
-  type: 'confirm';
+  type: "confirm";
   /**
    * @description       Modal width
    * @description.zh-CN 弹窗宽度
@@ -76,7 +76,7 @@ export interface PromptModalParams extends ModalParams {
    * @description.zh-CN 类型 'prompt'
    * @default
    */
-  type: 'prompt';
+  type: "prompt";
   /**
    * @description       Modal width
    * @description.zh-CN 弹窗宽度
@@ -109,7 +109,7 @@ export interface XuiPromptModalConfigFunctionProps extends ConfirmModalParams {
    * @description.zh-CN 类型 prompt 或 confirm
    * @default
    */
-  type: 'prompt' | 'confirm';
+  type: "prompt" | "confirm";
   /**
    * @description       Confirm button text(prompt)
    * @description.zh-CN 确认按钮文字(prompt)

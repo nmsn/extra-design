@@ -92,6 +92,12 @@ function App() {
         <p>Some contents...</p>
       </Modal>
       <Button onClick={onToggle}>WaringAlert</Button>
+
+      <input
+        type="file"
+        onChange={(e) => console.log(e.target.files)}
+        multiple
+      />
     </div>
   );
 }

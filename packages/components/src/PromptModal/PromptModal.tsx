@@ -1,5 +1,4 @@
-import "antd/es/modal/style/index";
-import Modal from "antd/es/modal";
+import { Modal } from "antd";
 import { CloseCircleFilled, ExclamationCircleFilled } from "@ant-design/icons";
 
 import {
