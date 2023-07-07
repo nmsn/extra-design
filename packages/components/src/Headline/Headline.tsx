@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-
+import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 
 import type { HeadlineProps } from "./Headline.d";
@@ -13,12 +13,13 @@ const Headline: React.FC<HeadlineProps> = ({
   extra,
 }) => {
   const className = "extra-design__head-line";
+  const history = useHistory();
 
   const goBack = useCallback(() => {
     if (onBack) {
       onBack();
     } else {
-      history.back();
+      history.goBack();
     }
   }, []);
 
