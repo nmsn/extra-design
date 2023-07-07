@@ -14,5 +14,5 @@ module.exports = {
     "@/(.*)": "<rootDir>/src/$1",
   },
   collectCoverage: true,
-  // setupFilesAfterEnv: ["@testing-library/jest-dom/"],
+  setupFilesAfterEnv: ["@testing-library/jest-dom/"],
 };
