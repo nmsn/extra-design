@@ -15,7 +15,7 @@ export default defineConfig({
         {
           libName: "@extra-design/components",
           style: (name) =>
-            `@extra-design/components/lib/${name}/style/index.less`,
+            `@extra-design/components/es/${name}/style/index.less`,
           camel2DashComponentName: false,
         },
       ],

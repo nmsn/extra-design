@@ -64,7 +64,7 @@ const VirtualList = () => {
             <div
               className="list"
               key={index}
-              style={{ backgroundColor: "red" }}
+              // style={{ backgroundColor: "red" }}
             >
               {" "}
               {item + ""} Item{" "}
