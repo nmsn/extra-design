@@ -26,7 +26,7 @@ import {
   RangePickerItem,
   SelectItem,
   TreeSelectItem,
-} from "./Item";
+} from "./SearchItem";
 import {
   NodeType,
   SearchComponentHandles,

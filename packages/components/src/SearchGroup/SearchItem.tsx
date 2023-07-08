@@ -1,15 +1,6 @@
 import React, { FC, useEffect, useRef } from "react";
 
-import "antd/es/input/style/index";
-import "antd/es/select/style/index";
-import "antd/es/tree-select/style/index";
-import "antd/es/cascader/style/index";
-import "antd/es/date-picker/style/index";
-import Cascader from "antd/es/cascader";
-import DatePicker from "antd/es/date-picker";
-import Input from "antd/es/input";
-import Select, { DefaultOptionType } from "antd/es/select";
-import TreeSelect from "antd/es/tree-select";
+import { Cascader, DatePicker, Input, Select, TreeSelect } from "antd";
 import classNames from "classnames";
 import dayjs from "dayjs";
 
@@ -23,6 +14,8 @@ interface NodeContainerProps {
   width?: number;
   children: React.ReactNode;
 }
+
+type ReactText = number | string;
 
 export const NodeContainer: FC<NodeContainerProps> = ({
   itemKey,
@@ -95,7 +88,7 @@ interface SelectItemProps {
   onLoad?: (value: any) => void;
   alwaysOnLoad?: boolean;
   options: JSX.Element[];
-  optionsData: DefaultOptionType[];
+  optionsData: React.ComponentProps<typeof Select>["options"];
 }
 
 export const SelectItem: FC<SelectItemProps> = ({
@@ -185,7 +178,7 @@ interface TreeSelectItemProps {
   onChange?: (param: any) => void;
   onSearch?: (value: any) => void;
   options: JSX.Element[];
-  optionsData: DefaultOptionType[];
+  optionsData: React.ComponentProps<typeof TreeSelect>["treeData"];
 }
 
 export const TreeSelectItem: FC<TreeSelectItemProps> = ({
@@ -326,7 +319,7 @@ export const CascaderItem: FC<CascaderItemProps> = ({
     },
     onSearch: onSearch || (() => {}),
     displayRender,
-    onChange: (value: React.ReactText[]) => {
+    onChange: (value: ReactText[]) => {
       const newState = {
         [itemKey]: value,
       };
