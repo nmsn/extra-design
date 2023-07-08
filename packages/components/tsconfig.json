@@ -20,6 +20,9 @@
     "skipLibCheck": true,
     "lib": ["esnext", "dom"],
     "strict": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "typeRoots": [
       "node_modules/@types",
       "global.d.ts",

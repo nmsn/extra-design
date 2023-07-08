@@ -6,7 +6,7 @@ module.exports = (api, options) => {
     api.cache(() => NODE_ENV);
   }
 
-  const plugins = ["lodash", ["@babel/plugin-transform-runtime"]];
+  const plugins = ["lodash", ["@babel/plugin-transform-runtime"], ["import"]];
 
   // if (modules) {
   //   plugins.push("add-module-exports");
@@ -14,7 +14,7 @@ module.exports = (api, options) => {
 
   return {
     presets: [
-      ["@babel/preset-env", { modules }],
+      ["@babel/preset-env"],
       ["@babel/preset-react", { runtime: "automatic" }],
       "@babel/preset-typescript",
     ],
