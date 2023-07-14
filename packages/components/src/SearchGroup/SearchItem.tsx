@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 
 import { Cascader, DatePicker, Input, Select, TreeSelect } from "antd";
 import classNames from "classnames";
@@ -9,7 +9,6 @@ const className = "extra-design__search-component";
 const dropdownClassName = `${className}--dropdown`;
 
 interface NodeContainerProps {
-  itemKey: string;
   label: string | JSX.Element;
   width?: number;
   children: React.ReactNode;
@@ -18,13 +17,12 @@ interface NodeContainerProps {
 type ReactText = number | string;
 
 export const NodeContainer: FC<NodeContainerProps> = ({
-  itemKey,
   label,
   children,
   width,
 }) => {
   return (
-    <div key={itemKey} className={`${className}--col`}>
+    <div className={`${className}--col`}>
       <div className={`${className}--col--title`}>{label}:</div>
       <div
         className={classNames({
@@ -39,40 +37,46 @@ export const NodeContainer: FC<NodeContainerProps> = ({
 };
 
 interface InputItemProps {
-  state: any;
-  itemKey: string;
+  name: string;
+  value: string;
   placeholder?: string;
-  changeState: (newState: any, callback?: () => void) => void;
   extraProps?: { [key: string]: any };
   onChange?: (param: any) => void;
-  onSearch: () => void;
+  onSearch?: (param: any) => void;
 }
 
 export const InputItem: FC<InputItemProps> = ({
-  state,
-  itemKey,
+  name,
+  value,
   placeholder,
-  changeState,
   extraProps,
   onChange,
   onSearch,
 }) => {
+  useEffect(() => {
+    setVal(value);
+  }, [value]);
+
+  const [val, setVal] = useState("");
+
   const commonProps = {
-    value: state[itemKey],
+    value: val,
     allowClear: true,
     placeholder,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target;
-      const newState = {
-        [itemKey]: value || undefined,
-      };
-      changeState(newState);
-      if (onChange) onChange(value);
+      onChange?.({ [name]: value });
+      setVal(value);
+    },
+    onPressEnter: (e) => {
+      const { value } = e.target;
+      onSearch?.({ [name]: value });
+      setVal(value);
     },
     ...extraProps,
   };
 
-  return <Input {...commonProps} onPressEnter={onSearch} />;
+  return <Input {...commonProps} />;
 };
 
 interface SelectItemProps {
