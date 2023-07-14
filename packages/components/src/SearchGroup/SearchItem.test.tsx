@@ -1,6 +1,6 @@
 import { NodeContainer, InputItem } from "./SearchItem";
 import { render, fireEvent } from "@testing-library/react";
-
+import { Enter } from "@/_utils/keycode";
 import { useState } from "react";
 
 describe("Test NodeContainer", () => {
@@ -70,11 +70,17 @@ describe("Test InputItem", () => {
 
     expect(getByPlaceholderText("testPlaceholder")).toBeInTheDocument();
     const input = getByPlaceholderText("testPlaceholder") as HTMLInputElement;
-    console.log(input);
     input && fireEvent.change(input, { target: { value: "testVal" } });
     expect(onChange.mock.calls.length).toBe(1);
     expect(onSearch.mock.calls.length).toBe(0);
+    expect(onChange.mock.results[0].value).toEqual({ testName: "testVal" });
 
     expect(getByDisplayValue("testVal")).toBeInTheDocument();
+
+    fireEvent.keyDown(input, { keyCode: Enter.code });
+
+    expect(onChange.mock.calls.length).toBe(1);
+    expect(onSearch.mock.calls.length).toBe(1);
+    expect(onSearch.mock.results[0].value).toEqual({ testName: "testVal" });
   });
 });
